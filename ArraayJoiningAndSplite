@@ -1,0 +1,28 @@
+package com.brigelabz;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+ class ArraayJoiningAndSplite {
+	public  static  Object splittingArrays() {
+		Scanner s =new Scanner(System.in);
+	      System.out.println("Enter the Numbers ");
+	      int size = s.nextInt();
+	      int [] myArray = new int[size];
+	      System.out.println("Enter elements of the array");
+	      for(int i=0; i< size; i++) {
+	         myArray[i] = s.nextInt();
+	      }
+	      System.out.println(Arrays.toString(myArray));
+	      int[] myArray1 = Arrays.copyOfRange(myArray, 0, myArray.length/2);
+	      int[] myArray2 = Arrays.copyOfRange(myArray, myArray.length/2, myArray.length);
+	      System.out.println("First SUb Array IS"+Arrays.toString(myArray1));
+	      System.out.println("Seacond Sub  Array Is "+Arrays.toString(myArray2));
+	      System.out.println("continue again --");
+	      return splittingArrays(); 
+	}
+	public static void main(String[] args) {
+		ArraayJoiningAndSplite.splittingArrays();
+	}
+	}
+
